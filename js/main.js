@@ -21,18 +21,21 @@ buttons.forEach(button => {
     button.addEventListener('click', () => displayText(button.textContent))
 })
 
+let num1 = ''
+let num2 = ''
 
+
+//when we add a val, we want it to concatenate with the rest of the vals
 function displayText(val) {
     console.log(val, typeof val)
-    let numVals = []
-    numVals.push(val)
+    nums += val
     // let num = new MakeNum(val)
     // console.log(num)
-    document.querySelector('h1').innerText = numVals
+    document.querySelector('h1').innerText = nums
 }
 
 class MakeNum {
-    constructor(...num) {
+    constructor(operator, ...num1, ...num2) {
         this.num = [...num]
     }
     getNumber() {
@@ -40,4 +43,10 @@ class MakeNum {
     }
 }
 
+function storeVals(val) {
+    localStorage.setItem('num', val)
+}
+
+console.log(document.querySelectorAll('.number'))
+console.log(document.querySelectorAll('.operator'))
 
