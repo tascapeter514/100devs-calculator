@@ -18,10 +18,15 @@ section {
 
 .button-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     /* max-width: 90%; */
     margin: 0 auto 0 auto;
     border: 1px solid blue;
+}
+
+.clear {
+    grid-row-start: 1;
+    grid-row-end: 5;
 }
 
 .display {
